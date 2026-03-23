@@ -5,109 +5,355 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FamilyDose — Privacy Policy</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      max-width: 720px; margin: 0 auto;
-      padding: 40px 24px; color: #1e293b;
-      line-height: 1.7; font-size: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.75;
+      font-size: 16px;
     }
-    h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
-    h2 { font-size: 18px; font-weight: 700; margin-top: 36px; color: #0f172a; }
-    p, li { color: #475569; }
-    ul { padding-left: 20px; }
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #3b82f6 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-icon {
+      width: 72px; height: 72px; border-radius: 20px;
+      background: rgba(255,255,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 800;
+      letter-spacing: -0.5px; margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 15px; color: rgba(255,255,255,0.8);
+      margin-bottom: 0;
+    }
     .badge {
-      display: inline-block; background: #eff6ff;
-      color: #2563eb; padding: 4px 12px;
-      border-radius: 20px; font-size: 13px;
-      font-weight: 600; margin-bottom: 32px;
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
     }
-    .footer { margin-top: 48px; padding-top: 24px;
-      border-top: 1px solid #e2e8f0;
-      font-size: 13px; color: #94a3b8; }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .meta {
+      display: flex; gap: 24px; flex-wrap: wrap;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .meta-item {
+      font-size: 13px; color: #64748b;
+    }
+    .meta-item strong { color: #1e293b; }
+    .section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .section-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 16px;
+    }
+    .section-num {
+      width: 32px; height: 32px; border-radius: 10px;
+      background: #eff6ff; color: #2563eb;
+      font-size: 13px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 17px; font-weight: 700;
+      color: #0f172a; margin: 0;
+    }
+    .section p {
+      font-size: 15px; color: #475569;
+      margin-bottom: 12px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      padding-left: 0; list-style: none;
+      margin-bottom: 12px;
+    }
+    .section ul li {
+      font-size: 15px; color: #475569;
+      padding: 6px 0 6px 24px;
+      position: relative;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .section ul li:last-child { border-bottom: none; }
+    .section ul li::before {
+      content: "→";
+      position: absolute; left: 0;
+      color: #2563eb; font-weight: 700;
+    }
+    .highlight-box {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .highlight-box p {
+      margin: 0; font-size: 15px;
+      color: #1e40af; font-weight: 500;
+    }
+    .perm-row {
+      display: flex; align-items: flex-start;
+      gap: 12px; padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .perm-row:last-child { border-bottom: none; }
+    .perm-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: #eff6ff;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .perm-title { font-size: 14px; font-weight: 700; color: #0f172a; }
+    .perm-desc { font-size: 13px; color: #64748b; margin-top: 2px; }
+    .contact-box {
+      background: #0f172a;
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .contact-box h3 {
+      font-size: 18px; font-weight: 700;
+      color: #fff; margin-bottom: 8px;
+    }
+    .contact-box p { font-size: 14px; color: #94a3b8; margin-bottom: 16px; }
+    .contact-email {
+      display: inline-block;
+      background: #1e3a5f;
+      color: #60a5fa;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px; font-weight: 600;
+      text-decoration: none;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 13px;
+      color: #94a3b8;
+      padding-bottom: 40px;
+    }
+    @media (max-width: 480px) {
+      .section { padding: 20px 18px; }
+      .hero h1 { font-size: 26px; }
+      .container { padding: 32px 16px 60px; }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Privacy Policy</h1>
-  <div class="badge">FamilyDose — Medicine Log App</div>
-
-  <p><strong>Last updated:</strong> March 2026</p>
-
-  <p>FamilyDose is a free, offline medication tracking app 
-  built for families and caregivers. This policy explains 
-  how your data is handled.</p>
-
-  <h2>1. Data Collection</h2>
-  <p>FamilyDose does <strong>not</strong> collect, transmit, 
-  or share any personal data. All information — including 
-  medication names, dosages, schedules, dose history, and 
-  family member names — is stored exclusively on your device 
-  using local on-device storage.</p>
-  <p>No data is ever sent to any server, cloud service, or 
-  third party.</p>
-
-  <h2>2. Health Data</h2>
-  <p>The app allows users to log health-related information 
-  including medication names, dosages, schedules, and dose 
-  history. This data is classified as health information and 
-  is handled as follows:</p>
-  <ul>
-    <li>Stored only on your device</li>
-    <li>Never accessed by the developer</li>
-    <li>Never transmitted or shared with any third party</li>
-    <li>Never uploaded to any cloud or server</li>
-  </ul>
-
-  <h2>3. Data Retention</h2>
-  <p>All data remains on your device for as long as the app 
-  is installed. The developer does not retain any user data 
-  at any point — because no data is ever received.</p>
-
-  <h2>4. Data Deletion</h2>
-  <p>You can permanently delete all app data at any time 
-  using either of these methods:</p>
-  <ul>
-    <li>Inside the app: <strong>Settings → Clear All Data</strong></li>
-    <li>Uninstalling the app from your device</li>
-  </ul>
-  <p>Both actions permanently and irreversibly remove all 
-  data stored by FamilyDose on your device.</p>
-
-  <h2>5. Permissions</h2>
-  <p>FamilyDose requests the following device permissions:</p>
-  <ul>
-    <li><strong>Notifications</strong> — to deliver medication 
-    dose reminders</li>
-    <li><strong>Exact Alarm</strong> — for precise, on-time 
-    reminder delivery</li>
-    <li><strong>Storage</strong> — only for local backup 
-    export and import</li>
-  </ul>
-  <p>No permission is used to collect, transmit, or share 
-  any data.</p>
-
-  <h2>6. Third-Party Services</h2>
-  <p>FamilyDose does not integrate any third-party SDKs, 
-  analytics tools, advertising networks, or crash reporting 
-  services. There are no third parties involved.</p>
-
-  <h2>7. Children's Privacy</h2>
-  <p>FamilyDose does not collect data from anyone, including 
-  children under the age of 13.</p>
-
-  <h2>8. Changes to This Policy</h2>
-  <p>If this policy is updated, the revised version will be 
-  published at this URL with an updated date.</p>
-
-  <h2>9. Contact</h2>
-  <p>For any privacy-related questions or requests:</p>
-  <p>📧 <strong>appfeedback.satheesh@gmail.com</strong></p>
-
-  <div class="footer">
-    This privacy policy applies to the FamilyDose Android 
-    application available on Google Play.<br/>
-    © 2026 FamilyDose. All rights reserved.
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+           stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </div>
+    <div class="badge">Privacy Policy</div>
+    <h1>FamilyDose</h1>
+    <p>Medicine Log App &nbsp;·&nbsp; Your data. Your device. Always.</p>
   </div>
 
+  <div class="container">
+
+    <!-- Meta -->
+    <div class="meta">
+      <div class="meta-item"><strong>Last updated:</strong> March 2026</div>
+      <div class="meta-item"><strong>App:</strong> FamilyDose — Medicine Log App</div>
+      <div class="meta-item"><strong>Platform:</strong> Android (Google Play)</div>
+      <div class="meta-item"><strong>Developer:</strong> Satheesh Mankulam</div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2>Overview</h2>
+      </div>
+      <div class="highlight-box">
+        <p>🔒 FamilyDose does not collect, transmit, or share any personal data. Everything stays on your device — always.</p>
+      </div>
+      <p>FamilyDose is a free, offline-first medication tracking app designed for families and caregivers. This Privacy Policy explains how data is handled within the app.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2>Data Collection</h2>
+      </div>
+      <p>FamilyDose does <strong>not</strong> collect, transmit, or share any personal data. All information entered into the app is stored exclusively on your device using secure local on-device storage.</p>
+      <ul>
+        <li>No data is sent to any server or cloud service</li>
+        <li>No data is shared with any third party</li>
+        <li>No analytics or tracking tools are used</li>
+        <li>No account or sign-up is required</li>
+        <li>No internet connection is needed to use the app</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2>Health Data</h2>
+      </div>
+      <p>The app allows users to log health-related information including medication names, dosages, schedules, dose history, and family member names. This data is classified as sensitive health information and is handled as follows:</p>
+      <ul>
+        <li>Stored only on your device using local storage</li>
+        <li>Never accessed or viewed by the developer</li>
+        <li>Never transmitted to any server or cloud</li>
+        <li>Never shared with any third party</li>
+        <li>Never used for advertising or analytics</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2>Data Retention</h2>
+      </div>
+      <p>All data is retained on your device for as long as the app is installed. The developer does not retain any user data at any point — because no data is ever received by the developer.</p>
+      <p>Your data exists only on your phone. It is yours entirely.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2>Data Deletion</h2>
+      </div>
+      <p>You can permanently delete all app data at any time using either of the following methods:</p>
+      <ul>
+        <li><strong>Inside the app:</strong> Settings → Clear All Data</li>
+        <li><strong>Uninstall the app</strong> from your device</li>
+      </ul>
+      <p>Both actions permanently and irreversibly remove all data stored by FamilyDose on your device. This action cannot be undone.</p>
+    </div>
+
+    <!-- Section 6 — Permissions -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2>App Permissions</h2>
+      </div>
+      <p>FamilyDose requests the following device permissions. No permission is used to collect or transmit data.</p>
+
+      <div class="perm-row">
+        <div class="perm-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="#2563eb" stroke-width="2" stroke-linecap="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </div>
+        <div>
+          <div class="perm-title">Notifications</div>
+          <div class="perm-desc">To deliver medication dose reminders at scheduled times</div>
+        </div>
+      </div>
+
+      <div class="perm-row">
+        <div class="perm-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="#2563eb" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div>
+          <div class="perm-title">Exact Alarm</div>
+          <div class="perm-desc">For precise, on-time reminder delivery for medication schedules</div>
+        </div>
+      </div>
+
+      <div class="perm-row">
+        <div class="perm-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="#2563eb" stroke-width="2" stroke-linecap="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="perm-title">Storage</div>
+          <div class="perm-desc">Only for local data backup export and import — no cloud access</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>FamilyDose does not integrate any third-party SDKs, analytics platforms, advertising networks, crash reporting services, or data brokers.</p>
+      <p>There are no third parties involved in the operation of this app.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>FamilyDose does not knowingly collect personal data from anyone, including children under the age of 13. Since no data is collected from any user, this app is safe for all ages.</p>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">9</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>If this Privacy Policy is updated, the revised version will be published at this URL with an updated effective date. Continued use of the app after any changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h3>Questions or Requests?</h3>
+      <p>For any privacy-related questions, data deletion requests, or concerns — reach out directly.</p>
+      <a class="contact-email" href="mailto:appfeedback.satheesh@gmail.com">
+        appfeedback.satheesh@gmail.com
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>This Privacy Policy applies to the FamilyDose Android application<br/>
+      available on Google Play Store.</p>
+      <p style="margin-top: 8px;">© 2026 FamilyDose · Satheesh Mankulam · All rights reserved.</p>
+    </div>
+
+  </div>
 </body>
 </html>
